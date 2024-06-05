@@ -1,6 +1,4 @@
 FROM nvidia/cuda:12.1.0-devel-ubuntu22.04
-
-# linux dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential cmake \
     git git-lfs \
@@ -13,12 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libegl1-mesa-dev \
     libgl1-mesa-dev \
     libglew-dev
-
 WORKDIR /src
 COPY ksim /src/ksim
 COPY pyproject.toml /src/
 COPY setup.cfg /src/
-
-# python dependencies
 RUN pip install --upgrade pip
 RUN pip install .
