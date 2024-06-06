@@ -17,4 +17,5 @@ COPY pyproject.toml /src/
 COPY setup.cfg /src/
 RUN pip install --upgrade pip
 RUN pip install .
-RUN pip install mediapy
+COPY ksim/requirements.txt /src/ksim/
+RUN pip install -r ksim/requirements.txt
