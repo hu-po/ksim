@@ -17,3 +17,4 @@ COPY pyproject.toml /src/
 COPY setup.cfg /src/
 RUN pip install --upgrade pip
 RUN pip install .
+RUN pip install mediapy
