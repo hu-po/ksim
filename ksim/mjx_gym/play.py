@@ -97,7 +97,7 @@ if __name__ == "__main__":
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Run PPO training with specified config file.")
     parser.add_argument("--config", type=str, required=True, help="Path to the config YAML file")
-    parser.add_argument("--use_mujoco", type=bool, default=False, help="Use mujoco instead of mjx for rendering")
+    parser.add_argument("--use_mujoco", action='store_true', help="Use mujoco instead of mjx for rendering")
     parser.add_argument("--params_path", type=str, default=None, help="Path to the params file")
     parser.add_argument("--n_steps", type=int, default=1000, help="Number of steps to rollout")
     parser.add_argument("--render_every", type=int, default=2, help="Render every nth step")

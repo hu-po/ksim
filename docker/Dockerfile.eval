@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libhdf5-dev \
     libegl1-mesa-dev \
     libgl1-mesa-dev \
-    libglew-dev
+    libglew-dev \
+    ffmpeg
 # Install pip for Python 3.11
 RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11
 RUN python3.11 -m pip install --upgrade pip
@@ -28,3 +29,7 @@ COPY README.md /src/
 RUN pip install .
 COPY ksim/requirements.txt /src/ksim/
 RUN pip install -r ksim/requirements.txt
+# Set EGL as the rendering backend for MuJoCo
+ENV MUJOCO_GL="egl"
+ENV MODEL_DIR="/src/ksim/assets"
+ENV WANDB_MODE="offline"
