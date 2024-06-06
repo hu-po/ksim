@@ -25,7 +25,6 @@ COPY pyproject.toml /src/
 COPY setup.cfg /src/
 COPY setup.py /src/
 COPY README.md /src/
-RUN pip install --upgrade pip
 RUN pip install .
 COPY ksim/requirements.txt /src/ksim/
 RUN pip install -r ksim/requirements.txt
