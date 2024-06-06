@@ -16,6 +16,7 @@
 <br />
 [![Python Checks](https://github.com/kscalelabs/ksim/actions/workflows/test.yml/badge.svg)](https://github.com/kscalelabs/ksim/actions/workflows/test.yml)
 [![Update Stompy S3 Model](https://github.com/kscalelabs/ksim/actions/workflows/update_s3_model.yml/badge.svg)](https://github.com/kscalelabs/ksim/actions/workflows/update_s3_model.yml)
+[![AutoEval](https://github.com/kscalelabs/autoeval/actions/workflows/eval.ksim.yml/badge.svg)](https://github.com/kscalelabs/autoeval/actions/workflows/eval.ksim.yml)
 
 </div>
 
